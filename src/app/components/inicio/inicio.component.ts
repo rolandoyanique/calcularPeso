@@ -22,7 +22,9 @@ femenino(){
   this.sexo='femenino';
 }
 calcularBMI(){
-  this.router.navigate(['/resultado'])
+  const BMI =(this.peso/Math.pow(this.altura/100,2)).toFixed(1);
+  console.log(BMI);
+  this.router.navigate(['/resultado',BMI])
 }
 }
 
